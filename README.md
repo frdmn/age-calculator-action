@@ -19,7 +19,7 @@ The age in years.
 ## Usage
 
 ```yaml
-- uses: frdmn/age-calculator-action@v0.1
+- uses: frdmn/age-calculator-action@v1.0
   id: birthday
   with:
     date: '1991-08-17'
@@ -52,7 +52,7 @@ You can then make use of the `${{ steps.replace.birthday.age }}` variable (which
 
 ## Version
 
-0.1
+1.0
 
 ## License
 
