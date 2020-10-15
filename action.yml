@@ -3,8 +3,7 @@ description: 'Calculate the age in years of a given date string'
 inputs:
   date:
     description: 'Date to calculate age'
-    required: false
-    default: ''
+    required: true
 outputs:
   age:
     description: 'The calculated age in years'
