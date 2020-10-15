@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  test:
+  calculate-age:
     runs-on: ubuntu-latest
     steps:
       - uses: frdmn/age-calculator-action@main
