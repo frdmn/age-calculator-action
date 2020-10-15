@@ -1,0 +1,13 @@
+name: 'Age calculator'
+description: 'Calculate the age in years of a given date string'
+inputs:
+  date:
+    description: 'Date to calculate age'
+    required: false
+    default: ''
+outputs:
+  age:
+    description: 'The calculated age in years'
+runs:
+  using: 'node12'
+  main: 'index.js'
