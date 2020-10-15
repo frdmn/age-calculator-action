@@ -1,0 +1,16 @@
+name: Test action
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: frdmn/age-calculator-action@main
+        id: birthday
+        with:
+          date: '1991-08-17'
+      - run: |
+          echo "Authors age in years: ${{ steps.birthday.outputs.age }}"
