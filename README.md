@@ -25,7 +25,7 @@ The age in years.
     date: '1991-08-17'
 ```
 
-You can then make use of the `${{ steps.replace.birthday.age }}` variable (which would return `29` in the example above) in additional action steps.
+You can then make use of the `${{ steps.birthday.outputs.age }}` variable (which would return `29` in the example above) in additional action steps.
 
 ## Contributing
 
