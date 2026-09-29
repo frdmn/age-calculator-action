@@ -8,8 +8,8 @@ outputs:
   age:
     description: 'The calculated age in years'
 runs:
-  using: 'node12'
-  main: 'index.js'
+  using: 'node24'
+  main: 'dist/index.js'
 branding:
   icon: 'clock'
   color: 'yellow'
