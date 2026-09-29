@@ -68,6 +68,8 @@ git add dist
 
 The [Test action](.github/workflows/test.yml) workflow checks out the repository and runs the action from the checkout (`uses: ./`), so pushes and pull requests test the code from that branch.
 
+The same workflow also rebuilds `dist/` and fails if it differs from what is committed, so a forgotten `npm run build` is caught before merging.
+
 ## Contributing
 
 1. Fork it

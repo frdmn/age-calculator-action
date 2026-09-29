@@ -5,6 +5,25 @@ on:
   pull_request:
 
 jobs:
+  check-dist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Verify dist/ is up to date
+        run: |
+          if [ -n "$(git status --porcelain dist)" ]; then
+            git status --short dist
+            git diff --stat dist
+            echo "::error::dist/ is out of date. Run 'npm run build' and commit the result."
+            exit 1
+          fi
+
   calculate-age:
     runs-on: ubuntu-latest
     steps:
