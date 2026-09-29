@@ -31507,7 +31507,10 @@ var age_calculator = __nccwpck_require__(6927);
 
 
 try {
-  const date = getInput('date');
+  const date = getInput('date', { required: true });
+  if (Number.isNaN(new Date(date).getTime())) {
+    throw new Error(`Invalid date: "${date}"`);
+  }
   const age = new age_calculator/* AgeFromDateString */.l(date).age.toString();
   setOutput('age', age);
 } catch (error) {
