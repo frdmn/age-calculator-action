@@ -1,5 +1,5 @@
-const core = require('@actions/core');
-const { AgeFromDateString } = require('age-calculator');
+import * as core from '@actions/core';
+import { AgeFromDateString } from 'age-calculator';
 
 try {
   const date = core.getInput('date');
