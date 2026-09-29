@@ -8,7 +8,8 @@ jobs:
   calculate-age:
     runs-on: ubuntu-latest
     steps:
-      - uses: frdmn/age-calculator-action@main
+      - uses: actions/checkout@v7
+      - uses: ./
         id: birthday
         with:
           date: '1991-08-17'
