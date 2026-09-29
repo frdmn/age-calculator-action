@@ -8,7 +8,7 @@ GitHub Action to calculate the age in years of a given date string for further u
 
 ### `date`
 
-**Required** Date to calculate age in _YYYY/MM/DD_ format.
+**Required** Date to calculate age in _YYYY-MM-DD_ (or _YYYY/MM/DD_) format.
 
 ## Outputs
 
@@ -19,13 +19,13 @@ The age in years.
 ## Usage
 
 ```yaml
-- uses: frdmn/age-calculator-action@v1.1
+- uses: frdmn/age-calculator-action@v2
   id: birthday
   with:
     date: '1991-08-17'
 ```
 
-You can then make use of the `${{ steps.birthday.outputs.age }}` variable (which would return `29` in the example above) in additional action steps.
+You can then make use of the `${{ steps.birthday.outputs.age }}` variable (which would return `35` in the example above, as of 2026) in additional action steps.
 
 ## Contributing
 
